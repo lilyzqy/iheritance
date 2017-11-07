@@ -1,10 +1,10 @@
-// function sum(...nums) {
-//   let counter = 0;
-//   for (let i = 0; i < nums.length; i++) {
-//     counter += nums[i];
-//   }
-//   return counter;
-// }
+function sum(...nums) {
+  let counter = 0;
+  for (let i = 0; i < nums.length; i++) {
+    counter += nums[i];
+  }
+  return counter;
+}
 
 function sum(num1, num2) {
   let nums = Array.from(arguments);
@@ -85,20 +85,20 @@ Function.prototype.curry = function curry(numArgs) {
 };
 
 //
-//
-// Function.prototype.curry = function curry(numArgs) {
-//   let nums = [];
-//   const _curry = (arg) => {
-//     nums.push(arg);
-//     if (nums.length === numArgs) {
-//       console.log(nums);
-//       return this(...nums);
-//     } else {
-//       return _curry;
-//     }
-//   };
-//   return _curry;
-// };
+
+Function.prototype.curry = function curry(numArgs) {
+  let nums = [];
+  const _curry = (arg) => {
+    nums.push(arg);
+    if (nums.length === numArgs) {
+      console.log(nums);
+      return this(...nums);
+    } else {
+      return _curry;
+    }
+  };
+  return _curry;
+};
 
 
 
